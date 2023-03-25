@@ -1,117 +1,52 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
-}
-
-body{
-    line-height: 1.5;
-    font-size: 16px;
-    color: #333;
-    background-color: #a1c3ff;
-}
-
-h1,h2{
-    margin-bottom: 15px;
-}
-
-.upper
+.tag
 {
-   
- 
-  padding: 0 30px;
- 
+    margin-top: 0;
 }
-
-.navbar
+@media(min-width:50rem){
+.main
 {
-background: #3474e6;    
-color: #fff;
-height: 60px;
-height: 100%;/*for aligning in center*/
-
-}
-
-.container
+    display: grid;
+    padding: 15px;
+    gap: 2rem;
+    grid-template-columns:repeat(4,1fr) ;
+}}
+.name
 {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 10px;
+    margin-bottom: 0;
 }
-
-ul{
-    list-style-type: none;  /*remove bullets*/
-    display: flex;
-    justify-content: end,space-between;
-}
-
-ul li{
-    margin-left: 20px;
-
-}
-
-.navbar a{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;   /*remove underline*/
-    align-items: center;
-
-}
-.navbar a:hover{
-    color: goldenrod;
-}
-
-.logo
+.content1,.content2,.content3,.content4,.content5
 {
-    font-size: x-large;
-    font-weight: bold;
-    margin-left: 10px;
+padding: 15px;
 }
-
-.header
-{
-    background:#0151cc;
-    color: #fff;
-    height: 300px;
+.b1{
+    
+   /* max-width: 50%;*/
+   grid-column: span 2;
+    border-radius: 15px;
+    background-color: rgb(104, 112, 255);
     
 }
-
-h1{
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
+.b2,.b5{
+    border-radius: 15px;
+    background-color: rgb(169, 113, 189);
+    
 }
-img{
-    max-width: 400px;
-   
-
+.b3{
+    border-radius: 15px;
+    background-color: rgb(80, 76, 80);
+    
 }
-.header .upper
-{
+@media(min-width:50rem){
 
-align-items: center;
-justify-content: space-between;
-}
-.upper{
-    display: flex;
+.b4{    grid-column: span 2;
+    border-radius: 15px;
+    background-color: rgb(255, 202, 255);
+}  
 }
 
-.lower
-{
-    display: flex;
-    justify-content: space-between;
+.b5{   
+grid-column-start:4;
+grid-row-start:1 ;
+grid-row-end: span 2;/* grid-row-end:3 ; */
 }
-.box
-{
-    flex: 1;
-    background: darkblue;
-    color: white;
-    border-radius: 10px;
-    margin: 20px 10px;
-    padding: 15px 20px;
-}
-.pic
-{
-    margin-top: 50px;
-}
+/* or grid-row:1/span 2; */
